@@ -1,0 +1,23 @@
+import comidas.*
+import golondrinas.*
+
+test "golondrinas" {
+	var juliana= new Golondrina()
+	var enriqueta = new Golondrina()
+	var melina = new Golondrina()
+	var tatiana = new Golondrina()
+	
+	
+	melina.comer(mondongo,9)
+	tatiana.comer(sorgo,8)
+	melina.volar(130)
+	tatiana.volar(40)
+	juliana.comer(alpiste,50)
+	
+	assert.equals(200,juliana.energia())
+	assert.equals(760,melina.energia())
+	assert.equals(22,tatiana.energia())
+	assert.that(juliana.estaDebil() and not juliana.estaFeliz()) /*not*/
+	assert.that(melina.estaFeliz())
+	assert.that(tatiana.estaDebil())
+}
